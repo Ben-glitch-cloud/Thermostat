@@ -42,11 +42,13 @@ class Thermostat {
     turnUp() {
 
         if(this.Thermostat_temp < 35 && this.powerMode == false) {
-            this.Thermostat_temp ++ 
+            this.Thermostat_temp ++  
             return this.Thermostat_temp
         } else if(this.Thermostat_temp < 25 && this.powerMode == true) {
             this.Thermostat_temp ++ 
             return this.Thermostat_temp
+        } else {
+            return "temperature limit"
         }
     } 
 
