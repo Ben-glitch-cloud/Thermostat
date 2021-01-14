@@ -8,8 +8,16 @@
     <script src="src/Thermostat.js"></script>
 </head>
     <body>
-        <header>
-            <h2 id="temp">18°C</h2>
+        <header>   
+
+            <div class="header_item">
+                <h2 id="temp">18°C</h2>
+            </div> 
+            
+            <div class="header_item">
+                <h3 id="temp_message">Max and min</h3>
+            </div> 
+
         </header>  
 
         <div class="buttons"> 
@@ -29,18 +37,27 @@
         <div class="power_saving"> 
 
             <div class="power_saving_items">
-                <button id="Power mode on">Power Mode on</button> 
+                <button id="Power mode on">Power Mode on</button>  
+                <h4>color</h4>
             </div>    
 
             <div class="power_saving_items">
-                <button id="Power mode off">Power Mode Off</button> 
+                <button id="Power mode off">Power Mode Off</button>  
+                <h4>color</h4> 
+
             </div> 
         </div>  
         
-        <footer class="energey_use">
+        <footer class="energey_use"> 
+
             <div class="energey_use_item">
                 <button>Energey Usege</button>
-            </div>
+            </div>  
+
+            <div class="energey_use_item">
+                <h3 id="energey_use_indicator">energey</h3>
+            </div> 
+
         </footer>
     </body>
 </html>
