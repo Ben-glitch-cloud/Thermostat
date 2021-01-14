@@ -1,30 +1,45 @@
+'use strict';
+
+
+// let e = 10 <-- is a local varible
+// e = 10 <-- is a globel varible  
+//node 
+//html how to grab an element from javascrapt  
+
 class Thermostat {
     constructor() {
 
         this.Thermostat_temp = 20  
 
-        this.powerMode = false 
+        this.powerMode = true
 
     }   
 
     powermodeOn() { 
 
         this.powerMode = true  
-        return this.powerMode 
+        return this.powerMode
 
-    } 
+    }  
+
 
     powermodeOff() {
 
         this.powerMode = false
         return this.powerMode 
 
-    } 
+    }  
+
+    ispowerModeon() { 
+
+       return this.powerMode === true  
+        
+    }
 
     reset(){
 
         this.Thermostat_temp = 20 
-        return this.Thermostat_temp
+        return this.Thermostat_temp 
 
     } 
 
@@ -39,14 +54,14 @@ class Thermostat {
 
     }
 
-    turnUp() {
+    turnUp(){
 
         if(this.Thermostat_temp < 35 && this.powerMode == false) {
             this.Thermostat_temp ++  
-            return this.Thermostat_temp
+            return `${this.Thermostat_temp}°C`
         } else if(this.Thermostat_temp < 25 && this.powerMode == true) {
             this.Thermostat_temp ++ 
-            return this.Thermostat_temp
+            return `${this.Thermostat_tem}°C`
         } else {
             return "temperature limit"
         }

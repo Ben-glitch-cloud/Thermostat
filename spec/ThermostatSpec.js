@@ -11,8 +11,8 @@ describe('Thermostat', function() {
 
         });  
 
-        it("should return the setting of the power saving mode", function() {
-            expect(newThermostat.powerMode).toBe(false)
+        it("should return the setting of the power saving mode", function() { 
+            expect(newThermostat.powerMode).toBe(true)
 
         });
 
@@ -21,16 +21,22 @@ describe('Thermostat', function() {
     describe("Power mode", function() {
         
         it("should set the power saving mode On(true)", function() {
-            
-            newThermostat.powermodeOn() 
+            newThermostat.powermodeOn()
             expect(newThermostat.powerMode).toBe(true)
         }); 
 
-        it("should set the power saving mode off(false)", function() {
-            
-            newThermostat.powermodeOn() 
+        it("should set the power saving mode off(false)", function() { 
             expect(newThermostat.powermodeOff()).toBe(false)
-        });
+        }); 
+
+        it("should check weather power saving mode is On", function() {
+            expect(newThermostat.ispowerModeon()).toBe(true)
+        }); 
+
+        it("should check weather power saving mode is On", function() { 
+            newThermostat.powermodeOff()
+            expect(newThermostat.ispowerModeon()).toBe(false)
+        }); 
 
     }); 
 
@@ -67,8 +73,9 @@ describe('Thermostat', function() {
 
     describe("increase and decrease temp", function() {
 
-        it("increase temp", function() {
-           expect(newThermostat.turnUp()).toEqual(21)
+        it("increase temp", function() { 
+            newThermostat.powermodeOff()
+           expect(newThermostat.turnUp()).toEqual('21°C')
 
         }); 
 
