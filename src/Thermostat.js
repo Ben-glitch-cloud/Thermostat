@@ -52,7 +52,8 @@ class Thermostat {
             return "high-usage"
         }
 
-    }
+    } 
+
 
     turnUp(){
 
@@ -72,7 +73,7 @@ class Thermostat {
         this.Thermostat_temp -- 
         return this.Thermostat_temp
         } else {
-        return "This is as low as you can go."
+        return "temperature limit"
         }
     }
 } 

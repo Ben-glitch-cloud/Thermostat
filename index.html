@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> 
     <link rel="stylesheet" href="index.css"> 
-    <script src="src/Thermostat.js"></script>
+    <script src="src/Thermostat.js"></script> 
 </head>
-    <body>
+    <body>  
+        <script src="jquery.js"></script>   
+        <script src="interface.js"></script>
         <header>   
 
             <div class="header_item">
-                <h2 id="temp">18°C</h2>
+                <h2 id="temperature"></h2>
             </div> 
             
             <div class="header_item">
-                <h3 id="temp_message">Max and min</h3>
+                <h3 id="temp_message">Temperature</h3>
             </div> 
 
         </header>  
@@ -37,25 +39,24 @@
         <div class="power_saving"> 
 
             <div class="power_saving_items">
-                <button id="Power mode on">Power Mode on</button>  
-                <h4>color</h4>
+                <button id="Powermodeon">Power Mode on</button>  
             </div>    
 
             <div class="power_saving_items">
-                <button id="Power mode off">Power Mode Off</button>  
-                <h4>color</h4> 
+                <button id="Powermodeoff">Power Mode Off</button>  
+                <h4 id="alert"></h4> 
 
             </div> 
         </div>  
         
-        <footer class="energey_use"> 
+        <footer class="energy_use"> 
 
-            <div class="energey_use_item">
-                <button>Energey Usege</button>
+            <div class="energy_use_item">
+                <button id="energey">Energey Usege</button>
             </div>  
 
-            <div class="energey_use_item">
-                <h3 id="energey_use_indicator">energey</h3>
+            <div class="energy_use_item">
+                <h3 id="energy_use_indicator">energey</h3>
             </div> 
 
         </footer>
