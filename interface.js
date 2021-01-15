@@ -59,7 +59,13 @@ $(document).ready(function() {
         $('#energy_use_indicator').text(thermostat.energyuse());  
 
         
-    }) 
-
+    })  
     
-})
+    $('#current-city').change(function() {  
+        var city = $('#current-city').val();
+        $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=9ec9591a31e3be7446a43513c920d793', function( weather ) { 
+        let celeius = Math.trunc(weather.main.temp - 273.15);
+            $('#current-temperature').text(celeius)   
+       })
+    })  
+}) 
